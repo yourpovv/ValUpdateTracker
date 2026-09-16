@@ -9,6 +9,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Language](https://img.shields.io/badge/Python-logoColor=white)
 
+<img width="873" height="613" alt="image" src="https://github.com/user-attachments/assets/9189a183-bb48-4fcf-b0dc-6a1463e7364a" />
 
 
 </div>
