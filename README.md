@@ -1,6 +1,17 @@
+<div align="center">
+
+
 # ValorantUpdateTracker
 
-Posts a Discord notification when VALORANT updates
+
+**Posts a Discord notification when VALORANT updates**
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Language](https://img.shields.io/badge/Python-logoColor=white)
+
+
+
+</div>
 
 ## Usage
 
