@@ -1,0 +1,30 @@
+name: Build Release Binary
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-build.txt
+
+      - name: Build executable
+        run: pyinstaller --onefile --name ValorantUpdateTracker src/launcher.py
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create ${{ github.ref_name }} dist/ValorantUpdateTracker.exe --title ${{ github.ref_name }} --generate-notes
